@@ -34,12 +34,20 @@ plantArea = plantArea * plantCount;
 
 console.log(`The area covered by ${plantCount} plants is ${plantArea} square meters`)
 
-plantPercentage = plantArea/area *100;
+let plantPercentage = plantArea/area *100;
+plantPercentage = plantPercentage.toFixed(2)
+console.log('the percentage area covered by the '+ plantCount + ' is ' + plantPercentage + '%.' )
 
-// if the plants growth after the given of weeks exceed 80% of the maximum capacity of the garden, the plants should be Pruned.
+// if the plants growth after the given number of weeks exceed 80% of the maximum capacity of the garden, the plants should be Pruned.
 if (plantPercentage > 80){
-    console.log(`The plants should be Pruned, because the plants cover ${plantPercentage.toFixed(2)} of the garden space which exceeds 80% of the maximum capacity`)
-} else {
-    
+
+    console.log(`The plants should be Pruned, because the plants cover ${plantPercentage}% of the garden space which exceeds 80% of the maximum capacity`)
+
+} else if (50 <= plantPercentage <= 80){ //if growth betwwen 50 and 80%
+
+    console.log(`The plants should be Pruned, because the plants cover ${plantPercentage}% of the garden space which exceeds 80% of the maximum capacity`) 
+
+} else{
+
 }
 
