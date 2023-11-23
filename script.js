@@ -168,3 +168,21 @@ console.log(`If the space remained circular, the radius of the expanded garden w
  */
 console.log("...  Part 3: Errors in Judgement  ...")
 
+// Scientists decided not to listen to recommendations and started with 100..
+plantCount = 50;
+plantArea = minArea * plantCount;
+console.log(`The Scientist are obstinate to start with ${plantCount} plants which will cover and area of ${plantArea} square meters`)
+
+//Check point if this exceeds 80% of the garden capacity..
+let isPossible= ( plantArea/area <= .8) ? true : false;
+try {//check if plants area greater then 80%
+    if(isPossible){
+        console.log(isPossible + ': Go ahead! Not a problem!' )
+    }else{
+        throw "Error - STOP 'the plants are exceeding the capacity of the garden'"
+    }
+} catch (error) {
+    console.log(error)
+}finally{
+    console.log('Thanks!')
+}
